@@ -85,7 +85,7 @@ class TransformerBlock(tf.keras.layers.Layer):
         self.ln2 = tf.keras.layers.LayerNormalization()
 
     def get_config(self):
-        return {"dim": self.dim, "heads": self.heads, "dropout_rate": dropout_rate}
+        return {"dim": self.dim, "heads": self.heads, "dropout_rate": self.dropout_rate}
 
     def call(self, inputs):
         # using residuals connections
